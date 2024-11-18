@@ -1,0 +1,1032 @@
+/* ESTILOS CSS CLASES PERSONALIZADAS + BOOSTRAF */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+.fas {
+  font-size: 20px !important;
+}
+
+/* ESTILOS PARA LA PRIMERA DIAPOSITIVA------------------------------ */
+
+.diapositiva {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s ease-out;
+}
+.modal-dialog-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100% - 1rem);
+}
+
+.diapositiva.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.First-Diapositiva {
+  background: url("images/naturaleza.jpeg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+
+  position: relative;
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none !important;
+}
+.div-titles-FirstDiapositiva {
+  position: absolute;
+  left: 5%;
+  top: 10%;
+}
+.First-diapositiva-MainTitle .first-name,
+.First-diapositiva-MainTitle .last-name {
+  display: block;
+  color: white;
+  font-size: 100px;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.div-titles-firstDiapositiva-SecondDiv {
+  position: absolute;
+  top: 60%;
+  left: 70%;
+}
+
+.div-titles-firstDiapositiva-firstTtitle {
+  color: white;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInFromLeft 1.5s ease-out forwards;
+}
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.div-titles-firstDiapositiva-button {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  background: none;
+  cursor: pointer;
+  border: 2px solid white;
+  color: white;
+  transition: transform 0.3s ease;
+
+  font-size: 15px;
+}
+.div-titles-firstDiapositiva-button:hover {
+  background-color: #059496;
+  color: white;
+  border: 2px solid white;
+}
+/* Estilos del botón flotante */
+.scroll-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 120px;
+  background-color: #059496; /* Fondo azul del botón */
+  color: white;
+  border: none;
+  border-radius: 10%;
+  padding: 30px;
+  font-size: 10px;
+  cursor: pointer;
+  display: none; /* Inicialmente invisible */
+  transition: opacity 0.3s ease;
+}
+
+.scroll-btn:hover {
+  background-color: white;
+}
+
+.scroll-btn i {
+  color: black;
+}
+/*                                                                  CERRAMOS   ESTILOS PARA LA PRIMERA DIAPOSITIVA------------------------------ */
+
+/* ESTILOS PARA LA 2 DIAPOSITIVA (-------------------------------) */
+
+.div-titles-firstDiapositiva-button:focus {
+  outline: none;
+}
+
+.div-titles-firstDiapositiva-button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.Second-Diapositiva {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #1a1a1a;
+  position: relative;
+  height: 600px;
+}
+
+.central-Div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 500px;
+}
+
+.central-Div h1 {
+  margin: 0;
+  text-align: left;
+  color: white;
+}
+
+.imgdiv {
+  position: absolute;
+  left: 55.1%;
+}
+.imgSeconddiv {
+  width: 500px;
+}
+
+.general-info p {
+  margin-top: 20px;
+  color: white;
+  width: 50%;
+}
+
+.SecondTextoDiv,
+.ThirdTextoDiv,
+.FourthTextoDiv {
+  display: none; /* Los ocultamos al principio */
+}
+
+/* Para las transiciones suaves */
+.general-info div {
+  transition: opacity 0.3s ease;
+}
+
+/* Inicialmente ocultamos el segundo texto */
+.SecondTextoDiv {
+  display: none; /* Lo mantenemos oculto */
+}
+
+/* Para transiciones suaves */
+.general-info div {
+  transition: opacity 0.3s ease;
+}
+
+/*                                                                     CERRAMOS       ESTILOS PARA LA 2 DIAPOSITIVA (-------------------------------) */
+
+/* ESTILOS PARA LA 3 DIAPOSITIVA (-------------------------------) */
+/* Contenedor general */
+/* Contenedor general */
+.Third-Diapositiva {
+  background-color: white;
+  height: auto;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Contenedor de las cartas */
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+/* Estilos de cada carta */
+.card {
+  flex: 1;
+  margin: 0 calc((100% - 3 * 300px) / 6);
+  text-align: start;
+  border: none;
+  margin-top: 10px;
+  transition: transform 0.4s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+/* Imagen */
+.card img {
+  width: 100%;
+  height: 350px;
+  max-width: 400px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.card:nth-child(1):hover .card-img {
+  content: url("./images/inviernoHover1.jpeg");
+}
+
+.card:nth-child(2):hover .card-img {
+  content: url("./images/inviernoHover1.jpeg");
+}
+
+.card:nth-child(3):hover .card-img {
+  content: url("./images/imageninvinero2.jpg");
+}
+
+/* Título */
+.card h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+/* Texto */
+.card p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0 0 20px;
+  padding: 5px;
+  flex-grow: 1;
+}
+
+/* Botón */
+.button-card {
+  padding: 10px 20px;
+  opacity: 0;
+  color: rgb(0, 0, 0);
+  background-color: #059496;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  padding: 10px;
+  font-weight: bold;
+  border: 2px solid white;
+  color: white;
+  margin: 2px;
+}
+
+.button-card:hover {
+  background-color: #066264;
+  color: white;
+}
+
+.button-card:active {
+  background-color: #031115; /* Cambia el color de fondo cuando se hace clic */
+}
+/* Hover en la carta */
+.card:hover {
+  transform: scale(1.1);
+
+  color: rgb(0, 0, 0);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover .button-card {
+  opacity: 1;
+}
+
+/* Estilos para el título de la sección */
+.title-thirddDiv {
+  text-align: center;
+  margin: 20px 0;
+  padding-top: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Animacion */
+
+/*                                                                    CERRAMOS            ESTILOS 3 DIAPOSITIVA (-------------------------------) */
+
+/* ESTILOSSS 4 DIAPOSITIVA (-------------------------------) */
+
+.fourSection {
+  background-color: #efead6;
+  margin-top: 20px;
+}
+.Fourth-Diapositiva-container {
+  display: flex;
+  justify-content: space-between;
+  height: 630px;
+  gap: 30px;
+  margin-top: 50px;
+  overflow-y: hidden;
+}
+
+.container-item {
+  flex: 1;
+}
+
+.container-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.container-item h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.container-item p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.title-fourSection {
+  text-align: center;
+  padding-top: 20px;
+}
+
+/*                                                                             CERRAMOS        ESTILOS 4 DIAPOSITIVA (-------------------------------) */
+
+/* Contenedor principal */
+.fiveSection {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.fiveSection img {
+  height: 600px;
+}
+.Five-Diapositiva.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Estilos para el primer div */
+.firstDiv {
+  flex: 1;
+  text-align: left;
+  margin-top: 20px;
+}
+
+/* Estilos para el segundo div */
+.secondDiv {
+  width: 400px;
+  padding: 0px;
+  position: relative;
+}
+
+/* Estilos para el botón */
+
+.modal-content {
+  position: absolute;
+  top: 40% !important;
+}
+
+/* Estilo para la imagen */
+.secondDiv img {
+  width: 100%;
+  height: 400px;
+  max-width: 500px;
+}
+
+.footerimg {
+  height: 538px;
+  width: 400px;
+  margin-right: -10px;
+}
+
+/* Botón redondo base */
+.card:hover .iconButton {
+  opacity: 1;
+}
+/* Estilo base del botón de las tarjeta de la quinta diapositiva */
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: transparent;
+  color: #282936;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid #282936;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+}
+
+/* Fondo expansivo al hacer hover */
+.iconButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%; /* Fondo empieza completamente fuera a la izquierda */
+  width: 100%;
+  height: 100%;
+  background-color: #059496;
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+
+.iconButton:hover::before {
+  left: 0;
+}
+
+/* Asegura que el icono y el texto estén encima del fondo */
+.iconButton i,
+.iconButton .button-text {
+  position: relative;
+  z-index: 1;
+}
+
+/* Efecto en el icono al hacer hover */
+.iconButton i {
+  font-size: 24px;
+  transition: transform 0.3s ease; /* Transición de rotación */
+}
+
+.iconButton:hover i {
+  transform: rotate(360deg); /* Girar el ícono */
+}
+
+/* Cambiar color del texto en hover */
+.iconButton:hover .button-text {
+  color: #fff;
+}
+
+.iconButton:hover {
+  padding: 10px 30px;
+  border-radius: 30px;
+}
+
+/* // final del botn */
+
+/* ESTILOSSS 6 DIAPOSITIVA (-------------------------------) */
+.Six-Diapositiva {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #1a1a1a;
+  position: relative;
+  height: 600px;
+  overflow-x: hidden;
+  padding-top: 0;
+  margin-bottom: 20px;
+  overflow-y: hidden;
+}
+
+.h3_Six-Diapositiva {
+  color: white;
+}
+
+.p_Six-Diapositiva {
+  color: white;
+}
+
+.contacButton {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  background: none;
+  cursor: pointer;
+  border: 2px solid white;
+  color: white;
+  transition: transform 0.3s ease;
+  font-weight: bold;
+}
+
+.contacButton:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  background-color: #059496;
+  border: 2px solid white;
+  color: white;
+}
+
+.imgLastDiv {
+  position: absolute;
+  left: 45%;
+}
+
+.contrataciones {
+  color: white;
+}
+.hover-icon {
+  animation: stretch-and-return 1s infinite;
+}
+@keyframes stretch-and-return {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.divSocial-icons {
+  display: flex;
+  flex-direction: row;
+  /* gap: 30px; */
+  justify-content: start;
+}
+
+/* Estilo base para los iconos */
+.divSocial-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: start; /* Para alinearlos hacia la izquierda */
+}
+
+/* Estilo base para los iconos */
+.social-icon {
+  position: relative;
+  font-size: 40px;
+  color: white;
+  transition: 0.3s ease;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  margin: 0 10px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Buttonwhatsapp */
+.scroll-btn.hidden {
+  display: none; /* Esta clase oculta el botón */
+}
+
+.divfooter {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.footer-imgDesplegable {
+  width: auto;
+  margin-top: 10px;
+  margin-left: -200px;
+}
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 60px;
+  height: 60px;
+  margin: 20px;
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+}
+
+/* Efecto cuando se pasa el ratón por encima */
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.8);
+}
+
+/* Animación de pulso */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(37, 211, 102, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.7);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(37, 211, 102, 0.5);
+  }
+}
+
+/* Efecto hover de la expansión del fondo circular */
+.social-icon::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00; /* Fondo por defecto */
+  transition: 0.5s;
+  z-index: 2;
+}
+
+/* Cuando hacemos hover, el fondo se expande hacia arriba */
+.social-icon:hover::before {
+  top: 0;
+}
+
+/* Efecto de color del icono y rotación al hacer hover */
+.social-icon:hover i {
+  color: white;
+  transform: rotateY(360deg); /* Rotación 360 grados */
+}
+
+/* Colores de fondo específicos para cada icono */
+.social-icon:nth-child(1)::before {
+  background: #3b5999;
+}
+
+.social-icon:nth-child(2)::before {
+  background: #55acee;
+}
+
+.social-icon:nth-child(3)::before {
+  background: #e4405f;
+}
+
+.social-icon:nth-child(4)::before {
+  background: #0077b5;
+}
+
+/* Hacemos que los iconos no se solapen con el fondo */
+.social-icon i {
+  z-index: 3;
+  position: relative;
+  transition: 0.5s;
+}
+
+.footer-img {
+  margin-right: -20px;
+  margin-bottom: -20px;
+}
+.custom-icon {
+  font-size: 40px !important; /* Cambia a cualquier tamaño que desees */
+}
+
+/* Estilos para el contenedor de la imagen */
+.container-item {
+  position: relative;
+  display: inline-block;
+}
+
+/* Estilo inicial para el spinner (oculto por defecto) */
+.loading-spinner {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border: 5px solid #f3f3f3; /* Borde claro */
+  border-top: 5px solid #3498db; /* Borde giratorio */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: none; /* Spinner oculto por defecto */
+}
+
+/* Animación para el giro del spinner */
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Mostrar el spinner cuando se hace hover sobre la imagen */
+.img-fourth-Diapositivaimg:hover + .loading-spinner {
+  display: block; /* Mostrar el spinner cuando se hace hover sobre la imagen */
+}
+
+/*                                                                             CERRAMOS        ESTILOS 6 DIAPOSITIVA (-------------------------------) */
+
+/* ||| ------------------------------------------------------------------------------    MEDIAQUERYS PARA EL MOVIL   ------------------------------------------------------------------------------ */
+
+@media screen and (max-width: 796px) {
+  /* Estilos para móviles pequeños */
+  body {
+    background-color: rgb(0, 0, 0);
+    font-size: 14px;
+    padding: 10px;
+    overflow-x: hidden !important;
+  }
+
+  /* //PRIMERA-DIAPOSITIVA */
+
+  .first-name {
+    font-size: 60px !important;
+  }
+  .last-name {
+    font-size: 60px !important;
+  }
+
+  .First-Diapositiva {
+    height: 500px;
+  }
+  .contenido {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .div-titles-firstDiapositiva-SecondDiv {
+    position: absolute;
+    left: 9%;
+  }
+
+  .div-titles-firstDiapositiva-button {
+    position: absolute;
+    left: -4%;
+  }
+
+  /* //SEGUNDA-DIAPOSITIVA */
+
+  .Second-Diapositiva {
+    height: 500px;
+  }
+  .central-Div {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    height: AUTO;
+  }
+  .imgdiv {
+    position: absolute;
+    left: 5.1%;
+    top: 48.3%;
+  }
+
+  .imgSeconddiv {
+    width: 80%;
+    height: auto;
+    height: 180px;
+  }
+
+  /* //TERCERA-DIAPOSITIVA */
+  .Third-Diapositiva {
+    height: auto;
+  }
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    overflow-x: hidden;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 15px;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+  .card:hover .iconButton {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
+  .card img {
+    width: 93%;
+    height: auto;
+    max-height: 250px;
+  }
+
+  .card h2 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0 0 10px;
+  }
+
+  .title-thirddDiv {
+    font-size: 1.5rem;
+    text-align: start;
+    margin: 20px 0;
+  }
+
+  /* CUARTA DIAPOSITIVA && QUINTA DIAPOSITIVA */
+  .Fourth-Diapositiva-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .img-fourth-Diapositivaimg {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    transition: background-color 0.5s ease-in-out;
+  }
+  .loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 5px solid #f3f3f3; /* Color claro del spinner */
+    border-top: 5px solid #3498db; /* Color del spinner */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: none; /* Oculto por defecto */
+  }
+
+  /* Animación del spinner */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Efecto de hover */
+  .container-item:hover .img-fourth-Diapositivaimg {
+    filter: brightness(
+      0.7
+    ); /* Efecto visual para las imágenes al hacer hover */
+  }
+
+  /* Cambio de fondo de la imagen después de la animación */
+  .img-fourth-Diapositivaimg.loaded {
+    background-color: rgba(
+      0,
+      255,
+      0,
+      0.5
+    ); /* Color de fondo después de la carga */
+  }
+
+  .fiveSection img {
+    height: 400px;
+  }
+
+  /* //SEXTA DIAPOSITIVA*/
+
+  .Six-Diapositiva {
+    display: flex;
+    flex-direction: column;
+    color: WHITE;
+  }
+
+  .footer-img {
+    height: auto;
+  }
+
+  .firstDiv H1 {
+    font-size: 30px;
+  }
+
+  .firstDiv h3 {
+    font-size: 20px;
+  }
+
+  .contacButton {
+    margin-left: -5px;
+  }
+
+  .social-icon {
+    font-size: 20px;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .fiveSection {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 20px;
+    height: auto;
+  }
+
+  .footer-img {
+    margin-right: 0px;
+  }
+
+  .title-fourSection {
+    text-align: start;
+  }
+
+  .divSocial-icons {
+    display: flex;
+    justify-content: center;
+    margin-left: -20px;
+    margin-top: 20px; /* Espaciado superior */
+  }
+
+  .divSocial-icons i {
+    font-size: 28px;
+  }
+
+  .scroll-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 70px;
+    background-color: #059496; /* Fondo azul del botón */
+    color: white;
+    border: none;
+    border-radius: 10%;
+    padding: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none; /* Inicialmente invisible */
+    transition: opacity 0.3s ease;
+  }
+  .scroll-btn i {
+    font-size: 40px;
+  }
+
+  .scroll-btn:hover {
+    background-color: #059496 !important;
+  }
+}
+
+/* //otra mediaquery */
+
+@media (width: 472px) {
+  .imgdiv {
+    position: absolute;
+    left: 5.1%;
+    top: 60.3%;
+  }
+
+  .fiveSection {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 20px;
+    height: 400px;
+  }
+}
+
+@media (width: 1024px) {
+  .imgSeconddiv {
+    width: 430px;
+  }
+  .footer-img {
+    width: 420px;
+  }
+}
+@media (width: 1440px) {
+  .imgSeconddiv {
+    width: 590px;
+  }
+  .footer-img {
+    width: 620px;
+  }
+}
+@media (width: 2560px) {
+  .imgSeconddiv {
+    width: 590px;
+  }
+  .footer-img {
+    width: auto;
+    margin-top: -18px;
+  }
+}

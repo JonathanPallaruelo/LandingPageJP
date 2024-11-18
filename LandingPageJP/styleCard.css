@@ -1,0 +1,58 @@
+/* Contenedor general */
+.cards-container {
+  display: flex;
+  gap: 20px;
+}
+
+/* Estilo de las tarjetas */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px; /* Ancho fijo para tarjetas */
+  height: 400px; /* Alto fijo */
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen */
+.card-img {
+  width: 100%;
+  height: calc(50% - 20px); /* Ocupa el 50% de la tarjeta menos el padding */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Título */
+.card h2 {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Texto */
+.card p {
+  flex-grow: 1; /* Ocupa el espacio restante dentro de la tarjeta */
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+
+
+.card-button:hover {
+  background-color: #388e3c; /* Cambia de color al pasar el ratón */
+}
+
+.card:hover .card-button {
+  display: flex; /* Mostrar botón al hacer hover en la tarjeta */
+}
